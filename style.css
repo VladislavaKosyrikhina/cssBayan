@@ -10,15 +10,33 @@ title{
     color: blue;
     text-align: center;
 }
-li{
+.paragraph {
+    margin-bottom: 20px;
+}
+.text{
+    position:relative;
+    display: block;
+    padding: 0.5rem 1rem;
     color: blue;
     font-size: 20px;
+    text-decoration: none;
+    cursor:pointer;
+    transition: background 2s ease-out;
+    border-top: none;
     
 }
-li:hover{
+.text:hover{
     color: yellow;
     font-size: 30px;
 }
-li:active{
-    
+.content{
+    display: none;
+}
+.content_active{
+    display: block;
+}
+.triger{
+    display:none;
+    border: 1px solid black;
+
 }
