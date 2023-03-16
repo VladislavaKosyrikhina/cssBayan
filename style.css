@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+head{
+    display: block;
+}
+
+title{
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 4px 4px 5px yellow;
+    color: blue;
+    text-align: center;
+}
+
+body{
+    background-color: burlywood;
+}
+
+.accordion{
+    max-width: 1920px;
+    margin: 3em auto;  
+    margin: 5rem auto;
+    padding: 3rem 6rem;
+}
+
+.paragraph{
+    padding: 2em;
+}
+
+.accordion label{
+    height: 2.5em;
+    padding: 0 1em;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.2em;
+    line-height: 2.5em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #0d0d0d;
+}
+
+.accordion label:hover ~ article{
+    width: 100%;
+    height: 80vh;
+    transition: 0.5s ease-in-out;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.accordion input:checked + label,
+.accordion input:checked + label:hover{
+    background: #c6e1ec;
+    color: #acb8cb;
+}
+
+.mark{
+    width: 1em;
+    height: 1em;
+    /* border: solid black 1px; */
+    transform: rotateZ(0deg);
+    background-image: url(./images/icons8-сложение-32.png); 
+    transition: 0.3s ease-in-out;   
+}
+
+.accordion input:checked + label > .mark{
+    transform: rotateZ(45deg);
+    transition: 0.3s ease-in-out;   
+}
+
+.accoordion input{
+    display: none;
+}
+
+.accordion article{
+    width: 100%;
+    height: 0vh;
+    padding: 0em;    
+    /* overflow: hidden; */  
+    display: flex;
+    justify-content: center;    
+	transition: 0.5s ease-in-out;
+}
+
+.accordion input:checked ~ article{
+    width: 100%;
+    height: 80vh;
+    /* padding: 15px;   */
+      
+    transition: 0.5s ease-in-out;
+}
+.text{
+    position:relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: blue;
+    font-size: 20px;
+    text-decoration: none;
+    cursor:pointer;
+    transition: background 2s ease-out;
+    border-top: none;
+    
+}
+
+.img{
+    flex:1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 80vh;
+}
+
+.pic1{
+    background-image: url(images/1.jpg);
+}
+
+.pic2{
+    background-image: url(images/2.jpg);
+}
+
+.pic3{
+    background-image: url(images/3.jpg);
+}
+
+.pic4{
+    background-image: url(images/4.jpg);
+}
+
+.pic5{
+    background-image: url(images/5.jpg);
+}
+
+.pic6{
+    background-image: url(images/6.jpg);
+}
+
+@media (min-width: 320px){
+    article{
+        padding: 0px;
+    }
+    .accoordion label{
+        font-size: 1.5em;
+        line-height: 1.5em;
+        height: 2em;        
+    }
+
+    .img{
+        background-size: 90% 80%;
+    }
+}
+
+@media (min-width: 820px){
+    .accoordion label{
+        font-size: 1.2em;
+        line-height: 2em;
+        height: 2em;
+    }
+    .img{
+        background-size: auto 80%;
+    }
+    
+}
+
+@media (min-width: 1920px){
+    .accoordion label{
+        font-size: 1.5em;
+        line-height: 2.5em;
+        height: 2.5em;
+    }
+}
+
